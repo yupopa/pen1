@@ -8,17 +8,7 @@ uploaded_file = st.file_uploader("Choose an image...", type="jpg")
 #file upload
 
 
-import urllib.request
 
-url = 'http://dl.dropboxusercontent.com/s/5f2iqy11fa30ns3/export.pkl?raw=1'
-filename = url.split('/')[-1]
-
-urllib.request.urlretrieve(url, filename)
-
-learn_inf = load_learner(Path("filename"))#load trained model
-
-
-#classification
 
 
 
