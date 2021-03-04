@@ -13,8 +13,8 @@ pathlib.PosixPath = pathlib.WindowsPath
 
 
 
-url = 'http://dl.dropboxusercontent.com/s/wblnlkuldgxo5zw/export.pkl?raw=1'
-filename = 'export.pkl'
+url = 'http://dl.dropboxusercontent.com/s/ytjerr72zrfjdz3/dog.pkl?raw=1'
+filename = 'dog.pkl'
 urlretrieve(url,filename)
 
 
@@ -46,6 +46,6 @@ class Predict:
             st.write(f'Click the button to classify') 
 if __name__=='__main__':
 
-    file_name='export.pkl'
+    file_name='dog.pkl'
 
     predictor = Predict(file_name)
