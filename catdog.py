@@ -10,7 +10,7 @@ from urllib.request import urlretrieve
 
 
 url = 'http://dl.dropboxusercontent.com/s/h0ryg92m05k6r35/cat.pkl?raw=1'
-filename = 'dog.pkl'
+filename = 'cat.pkl'
 urlretrieve(url,filename)
 
 
@@ -42,6 +42,6 @@ class Predict:
             st.write(f'Click the button to classify') 
 if __name__=='__main__':
 
-    file_name='dog.pkl'
+    file_name='cat.pkl'
 
     predictor = Predict(file_name)
