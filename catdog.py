@@ -9,7 +9,7 @@ from urllib.request import urlretrieve
 
 
 
-url = 'http://dl.dropboxusercontent.com/s/h0ryg92m05k6r35/cat.pkl?raw=1'
+url = 'http://dl.dropboxusercontent.com/s/2j1hft78sa0bosk/catdog.pkl?raw=1'
 filename = 'cat.pkl'
 urlretrieve(url,filename)
 
