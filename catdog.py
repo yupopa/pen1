@@ -13,7 +13,7 @@ pathlib.PosixPath = pathlib.WindowsPath
 
 
 
-url = 'http://dl.dropboxusercontent.com/s/5f2iqy11fa30ns3/export.pkl?raw=1'
+url = 'https://drive.google.com/uc?id=1V30NUR4t0pZ0a76d8NMx5XQ7NSSbyR__&export=download'
 filename = 'export.pkl'
 urlretrieve(url,filename)
 
