@@ -1,37 +1,41 @@
+from fastai.vision.widgets import *
+from fastai.vision.all import *
+
+from pathlib import Path
+
 import streamlit as st
-import numpy as np
-from PIL import Image
-from fastai.vision.all import load_learner, Path
-st.title("WELCOME CAT DOG CLASSIFIER")
-st.title("cat dog classifer")
-uploaded_file = st.file_uploader("Choose an image...", type="jpg")
-#file upload
 
+class Predict:
+    def __init__(self, filename):
+        self.learn_inference = load_learner(filename)
+        self.img = self.get_image_from_upload()
+        if self.img is not None:
+            self.display_output()
+            self.get_prediction()
+<   def download_model(self):
+		if path.exists('export.pkl') == False:
+			url = 'https://drive.google.com/uc?id=1V30NUR4t0pZ0a76d8NMx5XQ7NSSbyR__&export=download'
+			filename = 'export.pkl'
+			urlretrieve(url,filename)    
+    @staticmethod
+    def get_image_from_upload():
+        uploaded_file = st.file_uploader("Upload Files",type=['png','jpeg', 'jpg'])
+        if uploaded_file is not None:
+            return PILImage.create((uploaded_file))
+        return None
 
+    def display_output(self):
+        st.image(self.img.to_thumb(500,500), caption='Uploaded Image')
 
+    def get_prediction(self):
 
+        if st.button('Classify'):
+            pred, pred_idx, probs = self.learn_inference.predict(self.img)
+            st.write(f'Prediction: {pred}; Probability: {probs[pred_idx]:.04f}')
+        else: 
+            st.write(f'Click the button to classify') 
+if __name__=='__main__':
 
+    file_name='catdog.pkl'
 
-
-
-
-
-
-
-if uploaded_file is not None:
-    #image transformation and prediciton
-    img = Image.open(uploaded_file)
-    st.image(img, caption='Your Image.', use_column_width=True)
-    image = np.asarray(img)
-    label = learn_inf.predict(image) 
-    #label[0] accesses the actual label string
-    #output display
-    st.write("")
-    st.write("Classifying...")
-    #check for vowels in the names for correct grammar
-    if label[0][0] in "AEIOU":
-        st.write("## This looks like an")
-    else:
-        st.write("## This looks like a")
-    #our labels are in capital letters only
-    st.title(label[0].lower().title())
+    predictor = Predict(file_name)
