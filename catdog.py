@@ -6,6 +6,10 @@ from pathlib import Path
 import streamlit as st
 from urllib.request import urlretrieve
 
+import pathlib
+temp = pathlib.PosixPath
+pathlib.PosixPath = pathlib.WindowsPath
+
 
 
 
