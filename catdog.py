@@ -8,6 +8,10 @@ from urllib.request import urlretrieve
 
 
 
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
+
+
 
 url = 'http://dl.dropboxusercontent.com/s/ppuxevbt0d6jcav/cdog.pkl?raw=1'
 filename = 'cdog.pkl'
