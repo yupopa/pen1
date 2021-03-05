@@ -12,7 +12,7 @@ from urllib.request import urlretrieve
 url = 'http://dl.dropboxusercontent.com/s/ppuxevbt0d6jcav/cdog.pkl?raw=1'
 filename = 'cdog.pkl'
 urlretrieve(url,filename)
-
+st.markdown("CAT OR DOG)
 
 
 class Predict:
