@@ -45,8 +45,4 @@ class Predict:
             st.write(f'Prediction: {pred}; Probability: {probs[pred_idx]:.04f}')
         else: 
             st.write(f'Click the button to classify') 
-if __name__=='__main__':
 
-    file_name='cdog.pkl'
-
-    predictor = Predict(file_name)
