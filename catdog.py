@@ -48,6 +48,5 @@ class Predict:
 
 if __name__=='__main__':
 
-    filename='cdog.pkl'
 
     predictor = Predict(filename)
