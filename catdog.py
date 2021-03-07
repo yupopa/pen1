@@ -1,12 +1,8 @@
 from fastai.vision.widgets import *
 from fastai.vision.all import *
-
 from pathlib import Path
-
 import streamlit as st
 from urllib.request import urlretrieve
-
-
 
 
 
