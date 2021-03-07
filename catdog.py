@@ -48,6 +48,6 @@ class Predict:
 
 if __name__=='__main__':
 
-    file_name='cdog.pkl'
+    filename='cdog.pkl'
 
-    predictor = Predict(file_name)
+    predictor = Predict(filename)
