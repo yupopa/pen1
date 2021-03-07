@@ -26,8 +26,9 @@ class Predict:
         if self.img is not None:
             self.display_output()
             self.get_prediction()
+            
     
-
+    @staticmethod
     def get_image_from_upload():
         uploaded_file = st.file_uploader("Upload Files",type=['png','jpeg', 'jpg'])
         if uploaded_file is not None:
