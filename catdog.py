@@ -47,6 +47,4 @@ class Predict:
             st.write(f'Click the button to classify') 
 
 if __name__=='__main__':
-
-
     predictor = Predict(filename)
