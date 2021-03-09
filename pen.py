@@ -4,7 +4,7 @@ from pathlib import Path
 import streamlit as st
 from urllib.request import urlretrieve
 url = 'https://www.dropbox.com/s/6j8y83elzpenz1c/export%20%281%29.pkl?dl=0'
-filename = '%20%281%29.pkl'
+filename = 'export.pkl'
 urlretrieve(url,filename)
 st.markdown("HIGHLIGHTER OR PENCIL")
 
