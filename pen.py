@@ -3,11 +3,10 @@ from fastai.vision.all import *
 from pathlib import Path
 import streamlit as st
 from urllib.request import urlretrieve
-
-url = 'http://dl.dropboxusercontent.com/s/ppuxevbt0d6jcav/cdog.pkl?raw=1'
-filename = 'cdog.pkl'
+url = 'https://www.dropbox.com/s/6j8y83elzpenz1c/export%20%281%29.pkl?dl=0'
+filename = '%20%281%29.pkl'
 urlretrieve(url,filename)
-st.markdown("CAT OR DOG")
+st.markdown("HIGHLIGHTER OR PENCIL")
 
 class Predict:
     def __init__(self, filename):
