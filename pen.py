@@ -3,8 +3,8 @@ from fastai.vision.all import *
 from pathlib import Path
 import streamlit as st
 from urllib.request import urlretrieve
-url = 'http://dl.dropboxusercontent.com/s/6j8y83elzpenz1c/export.pkl?raw=1'
-filename = 'export.pkl'
+url = 'http://dl.dropboxusercontent.com/s/f54qsk57cs1u9xr/newbest.pkl?raw=1'
+filename = 'newbest.pkl'
 urlretrieve(url,filename)
 st.markdown("HIGHLIGHTER OR PENCIL")
 
